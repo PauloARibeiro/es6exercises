@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <div class="title">
+          <h3>Contacts</h3>
+        </div>
+        <div data-js="add-contact" class="add-contact">
+          <img src="img/add.svg" alt="add new contact" />
+        </div>
+      </header>
+      <!-- HEADER -->
+      <!-- ------ -->
+      <!-- FILTER -->
+      <section class="filter-options">
+        <button data-js="filter-vodafone">Vodafone</button>
+        <button data-js="filter-nos">NOS</button>
+      </section>
+      <!-- FILTER -->
+      <!-- ------ -->
+      <!-- FORM -->
+      <section class="contact-form" data-js="contact-form">
+        <input data-js="input-name" type="text" placeholder="name" />
+        <input data-js="input-number" type="text" placeholder="number" />
+        <button class="submit-contact" data-js="submit-contact">Submit</button>
+      </section>
+      <!-- FORM -->
+      <!-- ------ -->
+      <!-- LIST -->
+      <section data-js="contact-list" class="contact-list">
+        <div class="contact">
+          <div class="contact-info">
+            <h4>Name</h4>
+            <h6>915736073</h6>
+          </div>
+
+          <div class="contact-options">
+            <!-- <div class="edit-contact">
+              <img src="img/edit.svg" alt="edit" />
+            </div> -->
+            <div class="delete-contact">
+              <img src="img/delete.svg" alt="delete" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- LIST -->
+    </div>
+    <script src="index.js"></script>
+    <script>
+      // SOME EVENTS NOT NECESSARY FOR THE EXERCISE
+      const contactForm = document.querySelector('[data-js="contact-form"]');
+      const contactList = document.querySelector('[data-js="contact-list"]');
+      document.querySelector('[data-js="add-contact"]').addEventListener("click", () => {
+        contactForm.classList.add("active");
+      });
+    </script>
+  </body>
+</html>
